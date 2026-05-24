@@ -56,11 +56,11 @@ pageview = true
 comment = true
 
 [config.profile]
-name = "navfolio"
-handle = "@navfolio"
-role = "A Cat Developer"
-company = "Independent Studio"
-location = "Remote"
+name = "Ingrid Moreno"
+handle = "@ingridmoreno12"
+role = "Data Analyst | Analytics & Dataviz"
+company = "Itaú"
+location = "São Paulo, Brazil"
 email = "hello@navfolio.site"
 website = "https://astro.navfolio.site/"
 github = "https://github.com/navfolio"
@@ -72,7 +72,7 @@ label = "Home"
 href = "/"
 
 [[config.topNav.links]]
-label = "Blog"
+label = "Skills"
 href = "/blog"
 
 [[config.topNav.links]]
@@ -80,7 +80,7 @@ label = "Projects"
 href = "/projects"
 
 [[config.topNav.links]]
-label = "Vibe"
+label = "Trajetória"
 href = "/vibe"
 
 [[config.topNav.links]]
@@ -91,18 +91,39 @@ href = "/about"
 layout = "grid"
 
 [config.home.quote]
-text = ["Navigate your world,", "Showcase your story,", "and keep everything in one place."]
+text = [
+  "Curious by nature,",
+  "Passionate about solving problems,",
+  "and always learning something new along the way."
+]
 image = "/images/logo-with-name.png"
 
+[config.i18n.pt.quote]
+text = [
+  "Curiosa por natureza,",
+  "Apaixonada por resolver problemas,",
+  "e sempre aprendendo algo novo pelo caminho."
+]
+
 [config.home.intro]
-title = "here is navfolio"
-name = "navfolio"
+title = "Welcome,"
+name = " come in"
 body = [
-  "The name combines \"Navigation\" and \"Portfolio\".",
-  "Navfolio focuses on lightweight organization, smooth reading experience, and developer-friendly aesthetics.",
-  "It feels less like a resume, and more like a personal operating system for your ideas, projects, notes, and online presence.",
+  "I've always loved movies, games, and good stories, I think part of the magic has always been discovering what lies beyond the next page.",
+  "Today I work with data and analytics, looking for answers in data (or the right questions).",
+  "Here I share my projects, learnings, and pieces of this journey."
 ]
 image = "/images/logo-cat.png"
+
+[config.i18n.pt.intro]
+title = "Oie,"
+name = " seja bem-vind@"
+body = [
+  "Sempre gostei de filmes, jogos e boas histórias, acho que parte da graça sempre esteve em descobrir o que existe logo depois da próxima página.",
+  "Hoje trabalho com dados e analytics, procurando respostas nos dados (ou as perguntas certas).",
+  "Aqui compartilho os meus projetos, aprendizados e partes dessa jornada."
+]
+
 
 [config.home.latest]
 count = 1
@@ -114,27 +135,27 @@ dateArchiveBaseHref = ""
 
 [[config.home.navigation]]
 icon = "compass"
-title = "Portfolio"
-subtitle = "Selected work and case studies"
-href = "https://astro.navfolio.site/"
+title = "Projetos"
+subtitle = "Trabalhos selecionados e estudos de caso"
+href = "/projects"
 
 [[config.home.navigation]]
 icon = "pen"
-title = "Blog"
-subtitle = "Essays, notes, and field reports"
+title = "Skills"
+subtitle = "Habilidades e competências"
 href = "/blog"
 
 [[config.home.navigation]]
 icon = "briefcase"
-title = "Resume"
-subtitle = "Career profile and experience"
-href = "https://resume.navfolio.site/"
+title = "Trajetória"
+subtitle = "Perfil profissional e experiência"
+href = "/vibe"
 
 [[config.home.navigation]]
-icon = "github"
-title = "Open Source"
-subtitle = "Code, experiments, and tools"
-href = "https://github.com/navfolio"
+icon = "user"
+title = "Sobre mim"
+subtitle = "Conhece melhor quem estou aqui"
+href = "/about"
 
 [[config.home.connect]]
 label = "GitHub"
@@ -147,7 +168,7 @@ href = "https://astro.navfolio.site/"
 icon = "compass"
 
 [[config.home.connect]]
-label = "Blog"
+label = "Skills"
 href = "/blog"
 icon = "book"
 
@@ -162,21 +183,11 @@ href = "mailto:hello@navfolio.site"
 icon = "mail"
 
 [[config.home.doing]]
-text = "Shipping a personal dashboard template"
-mark = "01"
+text = "Under construction..."
+mark = "🚧"
 
-[[config.home.doing]]
-text = "Writing reusable notes for future projects"
-mark = "02"
+[[config.i18n.pt.doing]]
+text = "Em construção..."
+mark = "🚧"
 
-[[config.home.doing]]
-text = "Improving static-site publishing workflow"
-mark = "03"
 
-[[config.home.doing]]
-text = "Collecting useful developer resources"
-mark = "04"
-
-[[config.home.doing]]
-text = "Exploring small open-source ideas"
-mark = "05"

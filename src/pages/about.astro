@@ -2,15 +2,31 @@
 import { getCollection, render } from 'astro:content';
 import BlogArticle from '../layouts/BlogArticle.astro';
 
-const [about] = await getCollection('about');
+export const prerender = false;
+
+const lang =
+  Astro.params.lang ||
+  Astro.url.searchParams.get('lang') ||
+  'en';
+
+const allAbout = await getCollection('about');
+
+const about =
+  lang === 'pt'
+    ? allAbout.find(post => post.id.includes('pt'))
+    : allAbout.find(post => post.id.includes('en'));
 
 if (!about) {
-  throw new Error('Missing src/content/about.mdx content entry.');
+  throw new Error(`Missing about for language: ${lang}`);
 }
 
 const { Content, headings } = await render(about);
 ---
 
-<BlogArticle post={about} headings={headings} sidebar={{ enable: false, ...about.data.sidebar }}>
+<BlogArticle
+  post={about}
+  headings={headings}
+  sidebar={{ enable: false, ...about.data.sidebar }}
+>
   <Content />
 </BlogArticle>

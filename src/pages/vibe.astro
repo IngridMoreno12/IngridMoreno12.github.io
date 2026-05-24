@@ -7,13 +7,46 @@ import SmartImage from '../components/SmartImage.astro';
 import BlogTopNav from '../components/blog/BlogTopNav.astro';
 import { getSiteConfig } from '../data/site';
 
+export const prerender = false;
+
+const lang =
+  Astro.params.lang ||
+  Astro.url.searchParams.get('lang') ||
+  'en';
+
+// Agora aplica o filtro
+const vibeEntries = (await getCollection('vibe'))
+  .filter((item) => {
+    if (item.data.draft) return false;
+    
+    if (lang === 'pt') {
+      return item.id.includes('pt'); 
+    } else {
+      return item.id.includes('en');
+    }
+  })
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+console.log('Filtered entries:', vibeEntries.length);
+
+
+
 const { site, vibe: vibeConfig, theme } = await getSiteConfig();
+
 const palette = theme.palette;
 const showTrail = vibeConfig.showTrail;
 
-const vibeEntries = (await getCollection('vibe'))
-  .filter((item) => !item.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+// const vibeEntries = (await getCollection('vibe'))
+//   .filter((item) => {
+//     if (item.data.draft) return false;
+
+
+//     return lang === 'pt'
+//       ? item.id.endsWith('pt')
+//       : item.id.endsWith('en');
+//   })
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
 
 const vibes = await Promise.all(
   vibeEntries.map(async (entry, index) => {
@@ -23,10 +56,11 @@ const vibes = await Promise.all(
     return { entry, Content, align };
   }),
 );
+
 ---
 
 <!doctype html>
-<html lang="en" data-palette={palette}>
+<html lang={lang} data-palette={palette}>
   <head>
     <BaseHead
       title={`vibe | ${site.title}`}
@@ -411,9 +445,25 @@ const vibes = await Promise.all(
     <main data-pagefind-body>
       <div class="vibe-shell">
         <header class="vibe-hero">
-          <h1 class="vibe-title">vibe</h1>
-          <p class="vibe-subtitle">small fragments of life &amp; coding.</p>
-          <p class="vibe-note">Not formal enough for blog posts, but still part of the story.</p>
+          <h1 class="vibe-title">
+            <span id="title-text">Chapters</span>
+          </h1>
+
+          <p class="vibe-subtitle">
+            {
+              lang === 'pt'
+              ? 'Momentos importantes da minha trajetória acadêmica e profissional.'
+              : 'Important moments from my academic and professional journey.'
+            }
+          </p>
+
+          <p class="vibe-note">
+            {
+              lang === 'pt'
+              ? 'Algumas etapas, mudanças e conquistas ao longo do caminho.'
+              : 'A few milestones, changes, and achievements along the way.'
+            }
+          </p>
         </header>
 
         <section class="vibe-stream" aria-label="Vibe notes">
@@ -495,5 +545,7 @@ const vibes = await Promise.all(
         <script>import {mountVibeThread} from '../utils/vibe-thread'; mountVibeThread();</script>
       )
     }
+    
   </body>
 </html>
+<script>

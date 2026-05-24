@@ -254,6 +254,35 @@ const siteConfig = defineCollection({
         }),
       ),
     }),
+    i18n: z
+      .object({
+        pt: z
+          .object({
+            intro: z
+              .object({
+                title: z.string().optional(),
+                name: z.string().optional(),
+                body: z.array(z.string()).optional(),
+              })
+              .optional(),
+        quote: z
+          .object({
+            text: z.array(z.string()).optional(),
+          })
+          .optional(),
+
+        doing: z
+          .array(
+            z.object({
+              text: z.string(),
+              mark: z.string(),
+            }),
+          )
+          .optional(),
+      })
+      .optional(),
+  })
+  .optional(),
   }),
 });
 
@@ -265,7 +294,7 @@ const blog = defineCollection({
 });
 
 const about = defineCollection({
-  loader: glob({ base: './src/content', pattern: 'about.{md,mdx}' }),
+  loader: glob({ base: './src/content',  pattern: 'about*.{md,mdx}' }),
   schema: articleSchema,
 });
 
