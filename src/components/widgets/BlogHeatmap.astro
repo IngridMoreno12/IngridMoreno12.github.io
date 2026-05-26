@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Icon from '../Icon.astro';
-import { createRecentBlogHeatmap, type HeatmapDay } from '../../utils/blog-heatmap';
+import { createRecentPostHeatmap, type HeatmapDay } from '../../utils/blog-heatmap';
 
 interface Props {
   weeks?: number;
@@ -20,8 +20,8 @@ const {
   dateArchiveBaseHref,
   startDate,
 } = Astro.props;
-const posts = await getCollection('blog', ({ data }) => !excludeDraft || !data.draft);
-const heatmap = createRecentBlogHeatmap(posts, weeks, latestCount, startDate);
+const posts = await getCollection('projects', ({ data }) => !excludeDraft || !data.draft);
+const heatmap = createRecentPostHeatmap(posts, weeks, latestCount, startDate);
 const heatmapLabel = startDate
   ? `Writing activity since ${heatmap.startDate}`
   : `Recent ${heatmap.weeks} weeks writing activity`;

@@ -1,7 +1,7 @@
 [config.site]
-title = "navfolio"
-description = "A personal navigation portfolio starter built with Astro."
-pageTitle = "navfolio | Digital Publication Space"
+title = "Portfólio"
+description = "Meu Portfólio Navegável"
+pageTitle = "Ingrid Moreno | Portfólio"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
 repository = "https://github.com/dodolalorc/astro-navfolio"
 footerNote = "Released as an open-source starter."
@@ -10,8 +10,6 @@ footerNote = "Released as an open-source starter."
 showTrail = true
 
 [config.theme]
-# Available palettes:
-# green-soft, green-vivid, rose-soft, pink-soft, purple-soft, blue-soft, orange-soft, brown-soft
 palette = "green-soft"
 
 [config.comments]
@@ -39,7 +37,7 @@ reactions_enabled = "1"
 emit_metadata = "0"
 input_position = "top"
 theme = "preferred_color_scheme"
-lang = "zh-CN"
+lang = "pt"
 loading = "lazy"
 
 [config.comments.utterances]
@@ -50,7 +48,7 @@ theme = "github-light"
 
 [config.comments.waline]
 server_url = ""
-lang = "zh-CN"
+lang = "pt"
 dark = "html.dark"
 pageview = true
 comment = true
@@ -58,14 +56,14 @@ comment = true
 [config.profile]
 name = "Ingrid Moreno"
 handle = "@ingridmoreno12"
-role = "Data Analyst | Analytics & Dataviz"
-company = "Itaú"
+role = "Analytics Engineer | Data Analytics & Visualization"
+company = ""
 location = "São Paulo, Brazil"
-email = "hello@navfolio.site"
+email = "ingridmoreno1202@gmail.com"
 website = "https://astro.navfolio.site/"
-github = "https://github.com/navfolio"
+github = "https://github.com/IngridMoreno12"
 meta = "Open-source maintainer"
-avatar = "/images/logo.png"
+avatar = "/images/jude_duarte.jpg"
 
 [[config.topNav.links]]
 label = "Home"
@@ -101,13 +99,14 @@ image = "/images/logo-with-name.png"
 [config.home.intro]
 title = "Oie,"
 name = " seja bem-vind@"
+
 body = [
   "Sempre gostei de filmes, jogos e boas histórias, acho que parte da graça sempre esteve em descobrir o que existe logo depois da próxima página.",
   "Hoje trabalho com dados e analytics, procurando respostas nos dados (ou as perguntas certas).",
   "Aqui compartilho os meus projetos, aprendizados e partes dessa jornada."
 ]
-image = "/images/logo-cat.png"
 
+image = "/images/logo-cat.png"
 
 [config.home.latest]
 count = 1
@@ -117,17 +116,13 @@ excludeDraft = true
 startDate = ""
 dateArchiveBaseHref = ""
 
+# ---------- HOME NAVIGATION ----------
+
 [[config.home.navigation]]
 icon = "compass"
 title = "Projetos"
 subtitle = "Trabalhos selecionados e estudos de caso"
 href = "/projects"
-
-[[config.home.navigation]]
-icon = "pen"
-title = "Skills"
-subtitle = "Habilidades e competências"
-href = "/blog"
 
 [[config.home.navigation]]
 icon = "briefcase"
@@ -136,25 +131,29 @@ subtitle = "Perfil profissional e experiência"
 href = "/vibe"
 
 [[config.home.navigation]]
-icon = "user"
-title = "Sobre mim"
-subtitle = "Conhece melhor quem estou aqui"
-href = "/about"
+icon = "github"
+title = "GitHub"
+subtitle = "Projetos, códigos e experimentos"
+href = "https://github.com/IngridMoreno12"
+
+[[config.home.navigation]]
+icon = "linkedin"
+title = "LinkedIn"
+subtitle = "Vamos nos conectar?"
+href = "https://www.linkedin.com/in/ingrid-moreno-silv4/"
+
+
+# ---------- CONNECT ----------
 
 [[config.home.connect]]
 label = "GitHub"
-href = "https://github.com/navfolio"
+href = "https://github.com/IngridMoreno12"
 icon = "github"
 
 [[config.home.connect]]
-label = "Website"
-href = "https://astro.navfolio.site/"
-icon = "compass"
-
-[[config.home.connect]]
-label = "Skills"
-href = "/blog"
-icon = "book"
+label = "LinkedIn"
+href = "https://www.linkedin.com/in/ingrid-moreno-silv4/"
+icon = "linkedin"
 
 [[config.home.connect]]
 label = "Projects"
@@ -162,12 +161,11 @@ href = "/projects"
 icon = "repo"
 
 [[config.home.connect]]
-label = "Email"
-href = "mailto:hello@navfolio.site"
-icon = "mail"
+label = "Trajetória"
+href = "/vibe"
+icon = "briefcase"
+
 
 [[config.home.doing]]
 text = "Em construção..."
 mark = "🚧"
-
-

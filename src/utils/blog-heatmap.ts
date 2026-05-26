@@ -30,7 +30,7 @@ export interface LatestPost {
   date: Date;
 }
 
-type BlogPost = CollectionEntry<'blog'>;
+type ProjectPost = CollectionEntry<'projects'>;
 type HeatmapStartDate = Date | string | null | undefined;
 
 const DAYS_IN_WEEK = 7;
@@ -52,12 +52,12 @@ export function getLevel(count: number): 0 | 1 | 2 | 3 | 4 {
   return 4;
 }
 
-export function getLatestPosts(posts: BlogPost[], count = 1): LatestPost[] {
+export function getLatestPosts(posts: ProjectPost[], count = 1): LatestPost[] {
   return sortByDateDesc(posts)
     .slice(0, Math.max(1, count))
     .map((post) => ({
       title: post.data.title,
-      href: `/blog/${post.id}/`,
+      href: `/projects/${post.id}/`,
       date: post.data.date,
     }));
 }
@@ -84,7 +84,7 @@ function getConfiguredStartDate(startDate: HeatmapStartDate) {
   return date;
 }
 
-function getPostsByDate(posts: BlogPost[]) {
+function getPostsByDate(posts: ProjectPost[]) {
   const postsByDate = new Map<string, HeatmapPost[]>();
 
   for (const post of posts) {
@@ -92,7 +92,7 @@ function getPostsByDate(posts: BlogPost[]) {
     const existingPosts = postsByDate.get(key) ?? [];
     existingPosts.push({
       title: post.data.title,
-      href: `/blog/${post.id}/`,
+      href: `/projects/${post.id}/`,
     });
     postsByDate.set(key, existingPosts);
   }
@@ -100,8 +100,8 @@ function getPostsByDate(posts: BlogPost[]) {
   return postsByDate;
 }
 
-export function createRecentBlogHeatmap(
-  posts: BlogPost[],
+export function createRecentPostHeatmap(
+  posts: ProjectPost[],
   weeks = 12,
   latestCount = 1,
   startDate?: HeatmapStartDate,
