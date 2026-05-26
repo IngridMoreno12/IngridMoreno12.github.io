@@ -1,4 +1,4 @@
-# Ingrid Moreno — Portfólio
+# Portfólio
 
 Oiie, tudo certo?
 
