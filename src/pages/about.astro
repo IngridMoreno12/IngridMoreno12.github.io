@@ -2,14 +2,12 @@
 import { getCollection, render } from 'astro:content';
 import BlogArticle from '../layouts/BlogArticle.astro';
 
-export const prerender = false;
-
 const lang =
   Astro.params.lang ||
   Astro.url.searchParams.get('lang') ||
   'en';
 
-const allAbout = await getCollection('about');
+// const allAbout = await getCollection('about');
 
 const about =
   lang === 'pt'

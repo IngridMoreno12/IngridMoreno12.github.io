@@ -4,8 +4,6 @@ import Footer from '../../components/Footer.astro';
 import BlogTopNav from '../../components/blog/BlogTopNav.astro';
 import { getSiteConfig } from '../../data/site';
 
-export const prerender = false;
-
 const { site, theme } = await getSiteConfig();
 
 const palette = theme.palette;

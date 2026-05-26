@@ -7,7 +7,6 @@ import BlogHeatmap from '../components/widgets/BlogHeatmap.astro';
 import DoingCard from '../components/widgets/DoingCard.astro';
 import { getSiteConfig } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
-export const prerender = false;
 
 const cfg: any = await getSiteConfig();
 const { home, profile, site } = cfg;
