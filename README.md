@@ -2,7 +2,7 @@
 
 Oiie, tudo certo?
 
-Este repositório reúne meu portfólio pessoal, onde compartilho projetos, experiências, habilidades e partes da minha trajetória em Dados, Analytics e tecnologia.
+Aqui é meu portfólio pessoal, onde compartilho projetos, experiências, habilidades e partes da minha trajetória em Dados, Analytics e tecnologia no geral.
 
 Este projeto foi iniciado a partir do template **Astro Navfolio**, que serviu como ponto de partida para a estrutura inicial do portfólio. Estou aproveitando este projeto como uma oportunidade para aprender, personalizar, experimentar novas ideias e entender melhor as tecnologias envolvidas enquanto construo algo que represente minha própria trajetória.
 
@@ -16,17 +16,15 @@ Este projeto foi criado para:
 
 ## Processo de aprendizado
 
-Este portfólio também faz parte da minha jornada de aprendizado.
+Durante o desenvolvimento estou explorando conceitos de:
 
-Durante o desenvolvimento estou explorando conceitos relacionados a:
-
-- Astro
+- Astro (sério, eu nem sabia o que era isso)
 - Componentes e organização de projetos
 - TypeScript
 - Git e GitHub
 - GitHub Pages
 - UI/UX e personalização visual
-- Markdown / MDX
+- Markdown/MDX
 - Deploy e publicação
 
 ## Uso de IA
