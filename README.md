@@ -29,7 +29,7 @@ Durante o desenvolvimento estou explorando conceitos relacionados a:
 - Markdown / MDX
 - Deploy e publicação
 
-## Uso do template e IA
+## Uso de IA
 
 E sim, claro que estou usando IA como apoio aqui para me ajudar principalmente com:
 
