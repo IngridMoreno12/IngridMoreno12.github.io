@@ -92,30 +92,13 @@ layout = "grid"
 
 [config.home.quote]
 text = [
-  "Curious by nature,",
-  "Passionate about solving problems,",
-  "and always learning something new along the way."
-]
-image = "/images/logo-with-name.png"
-
-[config.i18n.pt.quote]
-text = [
   "Curiosa por natureza,",
   "Apaixonada por resolver problemas,",
   "e sempre aprendendo algo novo pelo caminho."
 ]
+image = "/images/logo-with-name.png"
 
 [config.home.intro]
-title = "Welcome,"
-name = " come in"
-body = [
-  "I've always loved movies, games, and good stories, I think part of the magic has always been discovering what lies beyond the next page.",
-  "Today I work with data and analytics, looking for answers in data (or the right questions).",
-  "Here I share my projects, learnings, and pieces of this journey."
-]
-image = "/images/logo-cat.png"
-
-[config.i18n.pt.intro]
 title = "Oie,"
 name = " seja bem-vind@"
 body = [
@@ -123,6 +106,7 @@ body = [
   "Hoje trabalho com dados e analytics, procurando respostas nos dados (ou as perguntas certas).",
   "Aqui compartilho os meus projetos, aprendizados e partes dessa jornada."
 ]
+image = "/images/logo-cat.png"
 
 
 [config.home.latest]
@@ -183,10 +167,6 @@ href = "mailto:hello@navfolio.site"
 icon = "mail"
 
 [[config.home.doing]]
-text = "Under construction..."
-mark = "🚧"
-
-[[config.i18n.pt.doing]]
 text = "Em construção..."
 mark = "🚧"
 

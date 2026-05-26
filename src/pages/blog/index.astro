@@ -8,8 +8,7 @@ const { site, theme } = await getSiteConfig();
 
 const palette = theme.palette;
 
-const lang =
-  Astro.url.searchParams.get('lang') || 'en';
+const lang = 'pt'
 
 const content = {
 
@@ -95,86 +94,6 @@ learning:[
 
 },
 
-en:{
-
-title:'Skills & Certifications',
-
-subtitle:
-'Technologies, tools and knowledge that are part of my journey.',
-
-sections:[
-
-{
-title:'Data & Analytics',
-
-skills:[
-{name:'SQL',icon:'🗄️'},
-{name:'Python',icon:'🐍'},
-{name:'PySpark',icon:'⚡'},
-{name:'ETL / ELT',icon:'🔄'},
-{name:'Data Analysis',icon:'📊'},
-{name:'Data Visualization',icon:'📈'},
-{name:'Storytelling',icon:'📚'}]
-},
-
-{
-title:'Cloud & AWS',
-
-skills:[
-{name:'Athena',icon:'☁️'},
-{name:'S3',icon:'🪣'},
-{name:'Glue ETL',icon:'⚙️'},
-{name:'QuickSight',icon:'📊'},
-{name:'Step Functions',icon:'🔀'}
-]
-},
-
-{
-title:'Development & Tools',
-
-skills:[
-{name:'Git',icon:'🌱'},
-{name:'GitHub',icon:'🐙'},
-{name:'VS Code',icon:'💻'}
-]
-},
-
-{
-title:'AI Tools',
-
-skills:[
-{name:'ChatGPT',icon:'🤖'},
-{name:'Claude',icon:'🧠'},
-{name:'GitHub Copilot',icon:'✨'}
-]
-}
-
-],
-
-certificationsTitle:'Certifications',
-
-certifications:[
-
-'AWS Cloud Practitioner (In Progress)',
-
-'Data Fundamentals',
-
-'Business Analysis'
-],
-
-learningTitle:'Currently exploring',
-
-learning:[
-
-'AWS & Cloud',
-
-'AI applied to data',
-
-'Analytics Engineering'
-
-]
-
-}
 
 };
 

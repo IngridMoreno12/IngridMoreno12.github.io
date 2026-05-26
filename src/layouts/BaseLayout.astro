@@ -6,15 +6,14 @@ import { getThemePalette } from '../data/site';
 interface Props {
   title: string;
   description: string;
-  lang?: string;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description } = Astro.props;
 const palette = await getThemePalette();
 ---
 
 <!doctype html>
-<html lang={lang === 'pt' ? 'pt-BR' : lang} data-palette={palette}>
+<html lang="pt-BR" data-palette={palette}>
   <head>
     <BaseHead title={title} description={description} />
   </head>
