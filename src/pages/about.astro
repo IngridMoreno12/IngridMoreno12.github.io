@@ -2,20 +2,12 @@
 import { getCollection, render } from 'astro:content';
 import BlogArticle from '../layouts/BlogArticle.astro';
 
-const lang =
-  Astro.params.lang ||
-  Astro.url.searchParams.get('lang') ||
-  'en';
-
 const allAbout = await getCollection('about');
 
-const about =
-  lang === 'pt'
-    ? allAbout.find(post => post.id.includes('pt'))
-    : allAbout.find(post => post.id.includes('en'));
+const about = allAbout.find(post => post.id.includes('pt'));
 
 if (!about) {
-  throw new Error(`Missing about for language: ${lang}`);
+  throw new Error('Missing about in Portuguese');
 }
 
 const { Content, headings } = await render(about);

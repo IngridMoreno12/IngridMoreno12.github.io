@@ -7,44 +7,20 @@ import SmartImage from '../components/SmartImage.astro';
 import BlogTopNav from '../components/blog/BlogTopNav.astro';
 import { getSiteConfig } from '../data/site';
 
-const lang =
-  Astro.params.lang ||
-  Astro.url.searchParams.get('lang') ||
-  'en';
+const lang = 'pt';
 
-// Agora aplica o filtro
 const vibeEntries = (await getCollection('vibe'))
-  .filter((item) => {
-    if (item.data.draft) return false;
-    
-    if (lang === 'pt') {
-      return item.id.includes('pt'); 
-    } else {
-      return item.id.includes('en');
-    }
-  })
+  .filter(
+    (item) =>
+      !item.data.draft &&
+      item.id.includes(lang)
+  )
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-console.log('Filtered entries:', vibeEntries.length);
-
-
 
 const { site, vibe: vibeConfig, theme } = await getSiteConfig();
 
 const palette = theme.palette;
 const showTrail = vibeConfig.showTrail;
-
-// const vibeEntries = (await getCollection('vibe'))
-//   .filter((item) => {
-//     if (item.data.draft) return false;
-
-
-//     return lang === 'pt'
-//       ? item.id.endsWith('pt')
-//       : item.id.endsWith('en');
-//   })
-//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
 
 const vibes = await Promise.all(
   vibeEntries.map(async (entry, index) => {

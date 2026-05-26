@@ -11,27 +11,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const cfg: any = await getSiteConfig();
 const { home, profile, site } = cfg;
 
-const url = new URL(Astro.request.url);
-const lang = url.searchParams.get('lang') || 'en';
-
-const translations = cfg.i18n?.[lang] || {};
-
-const intro = {
-  title: translations.intro?.title ?? home.intro.title,
-  name: translations.intro?.name ?? home.intro.name,
-  body: translations.intro?.body ?? home.intro.body,
-  image: home.intro.image,
-};
-
-const quote = {
-  text: translations.quote?.text ?? home.quote.text,
-  image: home.quote.image,
-};
-
-const doing = translations.doing ?? home.doing;
+const intro = home.intro;
+const quote = home.quote;
+const doing = home.doing;
 ---
 
-<BaseLayout title={site.pageTitle} description={site.pageDescription} lang={lang}>
+<BaseLayout title={site.pageTitle} description={site.pageDescription}>
   <div class="publication-bg" aria-hidden="true"></div>
   <DashboardFlow>
     <Fragment slot="profile">
