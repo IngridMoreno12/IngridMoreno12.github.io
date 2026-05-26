@@ -7,7 +7,7 @@ const lang =
   Astro.url.searchParams.get('lang') ||
   'en';
 
-// const allAbout = await getCollection('about');
+const allAbout = await getCollection('about');
 
 const about =
   lang === 'pt'
