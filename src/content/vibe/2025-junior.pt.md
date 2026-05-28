@@ -1,17 +1,16 @@
 ---
 title: 'Analista Júnior'
-date: '2025-04-01T00:00:00+08:00'
-updatedDate: '2025-04-01T00:00:00+08:00'
+date: '2025-05'
 draft: false
 type: text
-mood: milestone
+mood: Segundo Primeiro Degrau
 location: ''
 images: []
 tags: [career]
-align: left
+align: right
 size: sm
 ---
 
-Fui efetivada como Analista Júnior em Engenharia de Analytics.
+Durante seis meses no estágio, participei de um programa de formação em dados e IA. Ao final dele, fui efetivada no mesmo time que entrei.
 
-Um momento importante e uma oportunidade para continuar crescendo.
+Ali, tive ainda mais certeza que tinha feito a escolha certa.

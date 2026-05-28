@@ -2,9 +2,9 @@
 title = "Portfólio"
 description = "Meu Portfólio Navegável"
 pageTitle = "Ingrid Moreno | Portfólio"
-pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
-repository = "https://github.com/dodolalorc/astro-navfolio"
-footerNote = "Released as an open-source starter."
+pageDescription = "“Um portfólio pessoal para compartilhar ideias, projetos e trajetórias em construção."
+repository = "https://github.com/IngridMoreno12/IngridMoreno12.github.io"
+footerNote = "Feito para contar uma história, uma etapa de cada vez."
 
 [config.vibe]
 showTrail = true
@@ -60,7 +60,7 @@ role = "Analytics Engineer | Data Analytics & Visualization"
 company = ""
 location = "São Paulo, Brazil"
 email = "ingridmoreno1202@gmail.com"
-website = "https://astro.navfolio.site/"
+website = "https://www.linkedin.com/in/ingrid-moreno-silv4/"
 github = "https://github.com/IngridMoreno12"
 meta = "Open-source maintainer"
 avatar = "/images/jude_duarte.jpg"
@@ -70,11 +70,11 @@ label = "Home"
 href = "/"
 
 [[config.topNav.links]]
-label = "Skills"
+label = "Habilidades"
 href = "/blog"
 
 [[config.topNav.links]]
-label = "Projects"
+label = "Projetos"
 href = "/projects"
 
 [[config.topNav.links]]
@@ -82,7 +82,7 @@ label = "Trajetória"
 href = "/vibe"
 
 [[config.topNav.links]]
-label = "About"
+label = "Sobre"
 href = "/about"
 
 [config.home]

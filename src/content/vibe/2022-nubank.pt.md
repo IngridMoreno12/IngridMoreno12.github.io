@@ -1,10 +1,10 @@
 ---
 title: 'Nubank'
-date: '2022-08-01T00:00:00+08:00'
-updatedDate: '2022-08-01T00:00:00+08:00'
+date: '2022-10'
+updatedDate: '2024-4'
 draft: false
 type: text
-mood: first opportunity
+mood: Entrada
 location: São Paulo
 images: []
 tags: [career]
@@ -12,6 +12,6 @@ align: left
 size: md
 ---
 
-Entrei no Nubank como Data Labeler durante o segundo semestre da faculdade.
+Minha primeira experência com dados e analytics foi no Nubank como Data Labeler.
 
-Foi minha primeira experiência profissional em um ambiente fortemente orientado a dados.
+Lá, tiver a oportunidade de trabalhar em projetos com IA Generativa quando  ainda estávamos descobrindo do que ela era capaz.

@@ -14,7 +14,7 @@ const content = {
 
 pt:{
 
-title:'Skills & Certificações',
+title:'Habilidades & Certificações',
 
 subtitle:
 'Tecnologias, ferramentas e conhecimentos que fazem parte da minha jornada.',
@@ -73,11 +73,8 @@ certificationsTitle:'Certificações',
 
 certifications:[
 
-'AWS Cloud Practitioner (em andamento)',
-
-'Fundamentos de Dados',
-
-'Análise de Negócios'
+{label:'Practitioner - Business Analytics', href:'https://www.credly.com/badges/9a42a7e8-631e-4999-af84-525e28d669dd/linked_in_profile'},
+{label:'Practitioner - D&A Foundation', href:'https://www.credly.com/badges/960e8e62-9f67-4b29-ac7d-c13a864dc6c9/linked_in_profile'}
 ],
 
 learningTitle:'Atualmente explorando',
@@ -299,7 +296,15 @@ section.skills.map(skill=>(
 {
 pageContent.certifications.map(cert=>(
 
+typeof cert === 'string' ? (
+
 <li>{cert}</li>
+
+) : (
+
+<li><a href={cert.href} target="_blank" rel="noopener noreferrer">{cert.label}</a></li>
+
+)
 
 ))
 }

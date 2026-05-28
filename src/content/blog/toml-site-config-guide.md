@@ -60,7 +60,7 @@ description = "A personal navigation portfolio starter built with Astro."
 pageTitle = "navfolio | Digital Publication Space"
 pageDescription = "A calm AI-native personal publication space for notes, links, and writing."
 repository = "https://github.com/dodolalorc/astro-navfolio"
-footerNote = "Released as an open-source starter."
+footerNote = ""
 ```
 
 对应的内容集合名称是 `siteConfig`，入口 id 是 `config`。这意味着代码里读取的是同一份完整配置：
