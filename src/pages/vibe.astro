@@ -2,7 +2,6 @@
 import { getCollection, render } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import SmartImage from '../components/SmartImage.astro';
 import BlogTopNav from '../components/blog/BlogTopNav.astro';
 import { getSiteConfig } from '../data/site';
@@ -420,7 +419,7 @@ const vibes = await Promise.all(
       <div class="vibe-shell">
         <header class="vibe-hero">
           <h1 class="vibe-title">
-            <span id="title-text">Chapters</span>
+            <span id="title-text">Capítulos</span>
           </h1>
 
           <p class="vibe-subtitle">
@@ -476,8 +475,22 @@ const vibes = await Promise.all(
                 {showTrail && <span class="vibe-dot" data-vibe-dot aria-hidden="true" />}
                 <div class="vibe-meta">
                   {entry.data.mood && <span>{entry.data.mood}</span>}
-                  {entry.data.location && <span>{entry.data.location}</span>}
-                  <FormattedDate date={entry.data.date} />
+                  {entry.data.location && entry.data.location.trim() && (
+                    <span>{entry.data.location}</span>
+                  )}
+                  {entry.data.location && entry.data.location.trim() && entry.data.date && (
+                    <span style="margin: 0 0.5ch;">·</span>
+                  )}
+                  {entry.data.date && (
+                    <time datetime={entry.data.date.toISOString()}>
+                      {(() => {
+                        const d = entry.data.date;
+                        const mes = d.toLocaleDateString('pt-BR', { month: 'short' }).replace('.', '').trim();
+                        const ano = d.getFullYear();
+                        return `${mes}. ${ano}`;
+                      })()}
+                    </time>
+                  )}
                   {entry.data.tags.length > 0 && (
                     <span class="vibe-tags">
                       {entry.data.tags.map((tag) => (
